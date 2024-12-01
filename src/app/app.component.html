@@ -1,31 +1,38 @@
-<div class="card">
+<div class="card shadow-4 border-round-lg">
     <p-toolbar 
-        styleClass="bg-gray-900 shadow-2" 
-        [style]="{ 'border-radius': '3rem', 'background-image': 'linear-gradient(to right, var(--bluegray-500), var(--bluegray-800))' }">
-        <ng-template pTemplate="start">
-            <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" />
-        </ng-template>
+        class="shadow-2" 
+        [style]="{ 
+            'border-radius': '1rem', 
+            'background-image': 'linear-gradient(to right, #1E293B, #0F172A)', 
+            'padding': '0.5rem 1rem'
+        }">
+        
+        <!-- Navigation Buttons -->
         <ng-template pTemplate="center">
             <div class="flex flex-wrap align-items-center gap-3">
                 <button 
-                  class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:bg-white-alpha-10 transition-all transition-duration-200"
-                  [routerLink]="['/']"> 
+                    class="p-link inline-flex justify-content-center align-items-center text-white h-3rem w-3rem border-circle hover:opacity-90 transition-all transition-duration-200" 
+                    [routerLink]="['/']"> 
                     <i class="pi pi-home text-2xl"></i>
                 </button>
+              
             </div>
         </ng-template>
+        
+        <!-- User Profile (Centered) -->
         <ng-template pTemplate="end">
-            <div class="flex align-items-center gap-2">
+            <div class="flex justify-content-center align-items-center gap-2 w-full">
                 <p-avatar 
-                    image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGeyTSLYpDRYtbbLxmzwO949ACfzrbp01hGQ&s" 
-                    shape="circle" />
-                <span class="font-bold text-bluegray-50">
-                    Paul Carrillo
-                </span>
+                    image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0CS-hgTa_8z1Em6M-8ZD_GnMyenPqaoPswQ&s" 
+                    shape="circle" 
+                    size="large" />
+                <div>
+                    <span class="font-bold text-white">David</span>
+                    <small class="text-bluegray-300 block">Administrador</small>
+                </div>
             </div>
         </ng-template>
     </p-toolbar>
-  </div>
-  
-  <router-outlet></router-outlet> 
-  
+</div>
+
+<router-outlet></router-outlet>
